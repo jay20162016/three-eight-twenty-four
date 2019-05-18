@@ -26,7 +26,7 @@ extension String {
         let range = Range(uncheckedBounds: (lower: max(0, min(length, r.lowerBound)), upper: min(length, max(0, r.upperBound))))
         let start = index(startIndex, offsetBy: range.lowerBound)
         let end = index(start, offsetBy: range.upperBound - range.lowerBound)
-        return self[Range(start ..< end)]
+        return self[start ..< end]
     }
 }
 
