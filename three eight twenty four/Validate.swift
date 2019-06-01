@@ -5,6 +5,7 @@
 //  Created by Jay Jayjay on 9/3/17.
 //  Copyright © 2017 Jay Jayjay. All rights reserved.
 //
+
 import Foundation
 
 enum MyError : Error {
@@ -84,6 +85,7 @@ func isValidNumber(_ s:String) -> Bool {
 //assert(isValidNumber("123"))
 //assert(isValidNumber("-123"))
 //assert(isValidNumber("1*2") == false)
+
 func extractFirstNum(_ s:String) throws -> Int {
     print("extractFirstNum: s=", s)
     for i in 0..<s.length {
@@ -232,10 +234,13 @@ func validate(_ n1:Int,_ n2:Int,_ n3:Int,_ n4:Int,_ answer:String) -> Int {
     numbers.sort()
     
     let expected:[String] = ["\(n1)", "\(n2)", "\(n3)", "\(n4)"].sorted()
-    
+
     if numbers == expected {
         return compute(original_ans)
     }
     return 0
 }
+
+
+
 
